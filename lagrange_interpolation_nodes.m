@@ -1,6 +1,6 @@
 function lagrange_interpolation_nodes()
     % Number of nodes
-    n = 11;  % Example with 11 nodes
+    n = 10;  % Example with 11 nodes
     
     % Define the two functions
     f = @(x) 1 ./ (1 + 25 * x.^2);  % Runge's function

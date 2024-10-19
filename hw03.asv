@@ -32,13 +32,8 @@ classdef hw03
             % Then, make a comment/explanation on the trend of the error for **equally spaced nodes** as n increases for each function.
 
             % Write your comments here.
-            % The error for interpolation using equally spaced nodes for
-            % the function f(x) grows very rapidly (to order of 1e6) as
-            % number of nodes is
-            % increased. The major contribution to the error comes from the edges or the boundary of interpolation interval. For second function g(x), the error first
-            % decreases and then increases but remianing less than 1e-2 all
-            % the time. The error in g(x) is smallar because it is a smooth
-            % curve compared to f(x)
+            % It is interesting that while making the interpolation
+            % function using the data points at equall
             %
             %
             %
@@ -107,40 +102,38 @@ classdef hw03
             % Then, make a comment on the performance of the extreme Chebyshev nodes compared to Chebyshev nodes.
 
             % Write your comment here.
-            % It appears the magnitude of error with extreme Chebyshev
-            % nodes is a bit higher (but of same order) as that of
-            % Chebyshev nodes. The constraint at the end point in case of
-            % extreme Chebyshev nodes might have introduced more erorr in
-            % the internal nodes. 
             %
             %
             %
-% |n  |                        Function       | Error with extreme Chebyshev nodes  |
-% |---|---------------------------------------|-------------------------------------|
-% |  5|                @(x)1./(1+25*x.^2)     | 6.3862e-01                          |
-% | 10|                @(x)1./(1+25*x.^2)     | 1.3219e-01                          |
-% | 15|                @(x)1./(1+25*x.^2)     | 9.9308e-02                          |
-% | 20|                @(x)1./(1+25*x.^2)     | 1.7738e-02                          |
-% | 25|                @(x)1./(1+25*x.^2)     | 1.3649e-02                          |
-% | 30|                @(x)1./(1+25*x.^2)     | 2.4252e-03                          |
-% | 35|                @(x)1./(1+25*x.^2)     | 1.8710e-03                          |
-% | 40|                @(x)1./(1+25*x.^2)     | 3.3987e-04                          |
-% | 45|                @(x)1./(1+25*x.^2)     | 2.5645e-04                          |
-% | 50|                @(x)1./(1+25*x.^2)     | 4.6187e-05                          |
-% | 55|                @(x)1./(1+25*x.^2)     | 3.5147e-05                          |
-% |---|---------------------------------------|-------------------------------------|
-% |  5|                     @(x)sin(pi*x)     | 1.3357e-02                          |
-% | 10|                     @(x)sin(pi*x)     | 1.1730e-05                          |
-% | 15|                     @(x)sin(pi*x)     | 2.1000e-11                          |
-% | 20|                     @(x)sin(pi*x)     | 1.7764e-15                          |
-% | 25|                     @(x)sin(pi*x)     | 1.2212e-15                          |
-% | 30|                     @(x)sin(pi*x)     | 1.4433e-15                          |
-% | 35|                     @(x)sin(pi*x)     | 1.7764e-15                          |
-% | 40|                     @(x)sin(pi*x)     | 1.5543e-15                          |
-% | 45|                     @(x)sin(pi*x)     | 2.2204e-15                          |
-% | 50|                     @(x)sin(pi*x)     | 1.7764e-15                          |
-% | 55|                     @(x)sin(pi*x)     | 2.1094e-15                          |
-% |---|---------------------------------------|-------------------------------------|
+            %
+            %
+
+            % |n  |                        Function       | Error with extreme Chebyshev nodes  |
+            % |---|---------------------------------------|-------------------------------------|
+            % |  5|                @(x)1./(1+25*x.^2)     |                                     |
+            % | 10|                @(x)1./(1+25*x.^2)     |                                     |
+            % | 15|                @(x)1./(1+25*x.^2)     |                                     |
+            % | 20|                @(x)1./(1+25*x.^2)     |                                     |
+            % | 25|                @(x)1./(1+25*x.^2)     |                                     |
+            % | 30|                @(x)1./(1+25*x.^2)     |                                     |
+            % | 35|                @(x)1./(1+25*x.^2)     |                                     |
+            % | 40|                @(x)1./(1+25*x.^2)     |                                     |
+            % | 45|                @(x)1./(1+25*x.^2)     |                                     |
+            % | 50|                @(x)1./(1+25*x.^2)     |                                     |
+            % | 55|                @(x)1./(1+25*x.^2)     |                                     |
+            % |---|---------------------------------------|-------------------------------------|
+            % |  5|                     @(x)sin(pi*x)     |                                     |
+            % | 10|                     @(x)sin(pi*x)     |                                     |
+            % | 15|                     @(x)sin(pi*x)     |                                     |
+            % | 20|                     @(x)sin(pi*x)     |                                     |
+            % | 25|                     @(x)sin(pi*x)     |                                     |
+            % | 30|                     @(x)sin(pi*x)     |                                     |
+            % | 35|                     @(x)sin(pi*x)     |                                     |
+            % | 40|                     @(x)sin(pi*x)     |                                     |
+            % | 45|                     @(x)sin(pi*x)     |                                     |
+            % | 50|                     @(x)sin(pi*x)     |                                     |
+            % | 55|                     @(x)sin(pi*x)     |                                     |
+            % |---|---------------------------------------|-------------------------------------|
 
             eval_pts = linspace(-1, 1, 1000)';
             funcs = { @(x) 1 ./ (1 + 25 * x.^2), @(x) sin(pi * x) };
