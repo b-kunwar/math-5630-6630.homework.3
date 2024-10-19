@@ -1,5 +1,5 @@
-% Author: Your Name / your_email
-% Date: 2024-09-01
+% Author: Bikash Kunwar / bzk0067@auburn.edu
+% Date: 2024-10-19
 % Assignment Name: hw03
 
 classdef hw03
@@ -18,6 +18,7 @@ classdef hw03
             y = zeros(n, 1);
 
             % Your code goes here
+           y = lagrange_interpolation(data(:,1), data(:,2), eval);
         end
 
         function p2()
